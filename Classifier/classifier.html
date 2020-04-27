@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Classifier</title>
+</head>
+<body>
+<p>Classifier - function that takes some data as input and assigns a lable to it as an input</p>
+
+<p>Examples:</p>
+
+<p>Take picture and classify it as an apple or not</p>
+<p>Take an email and classify it as a spam or not</p>
+
+<p>Supervised Learning - technique to write a classifier automatically</p>
+<p>It begins from the proble we want to solve</p>
+
+<p>Steps:</p>
+<ol>
+    <li>
+        Collect training data - examples of the problem we want to solve.
+        More data you have - the better your classifier is
+    </li>
+    <l>
+        Use examples to train classifier
+    </l>
+</ol>
+
+<p>So we can think that features are the inputs of the classifier</p>
+<p>So labels are the outputs we want</p>
+
+<code>
+    features = [
+    [140, "Smooth"],
+    [130, "Smooth"],
+    [170, "Bumpy"],
+    [150, "Bumpy"]
+]
+
+labels = [
+    'apple',
+    'apple',
+    'orange',
+    'orange'
+]
+</code>
+
+<p>
+    we need to change all string values to ints since scikit-learn uses real-valued features
+</p>
+
+<code>
+    features = [[140, 1], [130, 1], [170, 0], [150, 0]]
+
+    labels = [0, 0, 1, 1]
+</code>
+
+<p>clf = tree.DecisionTreeClassifier() - that's just an empty box of rules</p>
+<p>To train it we need a training algorithm</p>
+<p>clf = clf.fit(features, labels)</p>
+<p>fit - Finds patterns In Data</p>
+
+<p></p>
+
+</body>
+</html>
